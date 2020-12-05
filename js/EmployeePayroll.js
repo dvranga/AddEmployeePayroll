@@ -1,17 +1,9 @@
 class EmployeePayrollData{
-   id;
-   name;
-   profilePic;
-   gender;
-   department;
-   salary
-   note;
-   startDate;
 
    get id(){
        return this._id;
    }
-   set id(id){
+   set id(id){  
        this._id=id;
    }
 
@@ -49,10 +41,33 @@ class EmployeePayrollData{
        this._note=note;
    }
 
+
+   getTodayDate=()=>{
+    var objToday = new Date(),
+	dayOfMonth = objToday.getDate(),
+	months = new Array('jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'),
+	curMonth = months[objToday.getMonth()],
+    curYear = objToday.getFullYear();
+    var today = dayOfMonth + curMonth + curYear;
+    return today;
+   }
+   
    get startDate(){return this._startDate}
    set startDate(startDate){
+    let date=this.getTodayDate();
+    if(date!=startDate){
         this._startDate=startDate;
+    }
+    else throw ("Date is Incorrect");
    }
 
-   
+   toString(){
+       const options={year:'numeric', month:'long',day:'numberic'};
+       const empDate=!this.startDate?"undefined":
+                    this.startDate.toLocaleDateString("en-US",options);
+        
+        return "id="+this.id+", name="+this.name+", gender="+this.gender+
+                ", profilePic="+this.profilePic+", department="+this.department+
+                ", salary="+this.salary+", startDate="+empDate+", note="+this.note;
+   }
 }
