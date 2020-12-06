@@ -55,7 +55,7 @@
                 <label class="label text" for="gender">Gender</label>
                 <div>
                     <input type="radio" name="gender" id="male" value="male">
-                    <label class="text" for="female">Male</label>
+                    <label class="text" for="male">Male</label>
                     <input type="radio" name="gender" id="female" value="female">
                     <label class="text" for="female">Female</label>
                 </div>
@@ -63,28 +63,28 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
-                    <input class="checkbox" type="checkbox" name="hr" id="hr" value="hr">
+                    <input class="checkbox" type="checkbox" name="department" id="hr" value="HR">
                     <label class=" text" for="hr">Hr</label>
-                    <input class="checkbox" type="checkbox" name="sales" id="sales" value="sales">
+                    <input class="checkbox" type="checkbox" name="department" id="sales" value="Sales">
                     <label class=" text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" name="finance" id="finance" value="finance">
+                    <input class="checkbox" type="checkbox" name="department" id="finance" value="Finance">
                     <label class=" text" for="finance">Finance</label>
-                    <input class="checkbox" type="checkbox" name="engineer" id="engineer" value="engineer">
+                    <input class="checkbox" type="checkbox" name="department" id="engineer" value="Engineer">
                     <label class=" text" for="engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" name="other" id="other" value="other">
-                    <label class=" text" for="other">Other</label>
+                    <input class="checkbox" type="checkbox" name="department" id="others" value="Others">
+                    <label class=" text" for="others">Other</label>
                 </div>
             </div>
             <div class="row-content">
                 <label class="label text" for="salary">Salary</label>
-                <input class="input" type="range" name="salary" id="salary" max="30000000" min="30000" step="100" value=300000>
-                <output class="salary-output text" for="salary">30000000</output>
+                <input class="input" type="range" name="salary" id="salary" max="500000" min="300000" step="100" value=400000>
+                <output class="salary-output text" for="salary">400000</output>
             </div>
 
             <div class="row-content">
-              <label class="label text" for="startdate">Start Date</label>
+              <label class="label text" for="startDate">Start Date</label>
                 <div>
-                    <select id="day" name="day" >
+                    <select id="day" name="Day" >
                        <option value="01">1</option>
                        <option value="02">2</option>
                        <option value="03">3</option>
@@ -117,7 +117,7 @@
                        <option value="30">30</option>
                        <option value="31">31</option>
                    </select>
-                    <select id="month" name="month">
+                    <select id="month" name="Month">
                     <option value="jan">January</option>
                     <option value="feb">Febuary</option>
                     <option value="mar">March</option>
@@ -131,7 +131,7 @@
                     <option value="nov">November</option>
                     <option value="dec">December</option>
                   </select>
-                    <select id="year" name="year">
+                    <select id="year" name="Year">
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
@@ -145,12 +145,12 @@
 
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
-                <textarea class="input" id="notes" name="notes" placeholder="type your notes here" style="height: 100px;"></textarea>
+                <textarea class="input" id="notes" name="Notes" placeholder="type your notes here" style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
                 <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
-                    <button class="submitButton button" type="submit" id="submit">Submit</button>
+                    <button class="submitButton button" type="submit" id="submitButton">Submit</button>
                     <button class="resetButton button" type="reset" id="reset">Reset</button>
                 </div>
             </div>
