@@ -48,14 +48,17 @@ class EmployeePayrollData{
 	months = new Array('jan', 'feb', 'mar', 'apr', 'may', 'june', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'),
 	curMonth = months[objToday.getMonth()],
     curYear = objToday.getFullYear();
-    var today = dayOfMonth + curMonth + curYear;
+    var today = dayOfMonth + "-" + curMonth + "-" + curYear;
     return today;
    }
    
    get startDate(){return this._startDate}
    set startDate(startDate){
-    let date=this.getTodayDate();
-    if(date!=startDate){
+    let presentDate=this.getTodayDate();
+    let newStartDate=startDate;
+    var x = new Date(presentDate);
+    var y = new Date(newStartDate);
+    if(x>y){
         this._startDate=startDate;
     }
     else throw ("Date is Incorrect");

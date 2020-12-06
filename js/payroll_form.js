@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     const startdateError=document.querySelector('.startdate-error');
     day.addEventListener('input',function(){
         try{
-            (new EmployeePayrollData()).startDate=day.value+month.value+year.value;;
+            (new EmployeePayrollData()).startDate=day.value+"-"+month.value+"-"+year.value;;
             startdateError.textContent="";
         }catch(e){
             startdateError.textContent=e;
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     })
     month.addEventListener('input',function(){
         try{
-            (new EmployeePayrollData()).startDate=day.value+month.value+year.value;;
+            (new EmployeePayrollData()).startDate=day.value+"-"+month.value+"-"+year.value;;
             startdateError.textContent="";
         }catch(e){
             startdateError.textContent=e;
@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
     })
     year.addEventListener('input',function(){
         try{
-            (new EmployeePayrollData()).startDate=day.value+month.value+year.value;;
+            (new EmployeePayrollData()).startDate=day.value+"-"+month.value+"-"+year.value;;
             startdateError.textContent="";
         }catch(e){
             startdateError.textContent=e;
